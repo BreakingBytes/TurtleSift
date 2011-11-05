@@ -88,6 +88,7 @@ namespace ExampleCsPlugin
                 //tickets.Add(new TicketItem(12, "Service doesn't start on Windows Vista"));
                 //tickets.Add(new TicketItem(19, "About box doesn't render correctly in large fonts mode"));
                 
+                
                 foreach (SifterApi.Types.IssueListingEntry ile in ILEs)
                     tickets.Add(new TicketItem(ile.Number, ile.Subject));
 
@@ -98,7 +99,13 @@ namespace ExampleCsPlugin
                 //revPropValues[0] = "13, 16, 17";
                 //revPropValues[1] = "myownvalue";
 
-                bugIDOut = bugID + "added";
+                string added = "";
+                for (n = 0; n < ILEs.Count; n++) 
+                {
+                    added += "," + ILEs[n].Number.ToString();
+                }
+
+                bugIDOut = bugID + added;
 
                 MyIssuesForm form = new MyIssuesForm( tickets );
                 if ( form.ShowDialog( ) != DialogResult.OK )
