@@ -1,6 +1,6 @@
 ﻿
-Microsoft Visual Studio Solution File, Format Version 10.00
-# Visual Studio 2008
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual C# Express 2010
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SifterApi", "SifterApi\SifterApi.csproj", "{931A6722-26EA-4489-83A8-C299982CF5F4}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SifterTest", "SifterTest\SifterTest.csproj", "{70445AC8-C588-4569-BCE6-37813C5015F5}"

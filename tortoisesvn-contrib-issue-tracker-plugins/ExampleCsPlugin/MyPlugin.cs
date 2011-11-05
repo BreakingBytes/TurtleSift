@@ -4,6 +4,7 @@ using System.Text;
 using System.Windows.Forms;
 using System.Runtime.InteropServices;
 using Microsoft.Win32;
+using SifterApi; // SifterApi dll
 
 namespace ExampleCsPlugin
 {
@@ -16,6 +17,29 @@ namespace ExampleCsPlugin
 
         public bool ValidateParameters(IntPtr hParentWnd, string parameters)
         {
+            // sifterapi code
+            int first = parameters.IndexOf(",");
+            int last = parameters.LastIndexOf(",");
+            string Proj = parameters.Substring(0, first);                                // textBoxProj "<enter your api access key here>"
+            string ApiKey = parameters.Substring(first + 1, last - first - 1);           // textBoxApiKey "<enter your company name here>"
+            string Uri = parameters.Substring(last + 1, parameters.Length - last - 1);   // textBoxUri "<enter your project name here>"
+
+            Sifter S = new Sifter(ApiKey, Uri);
+
+            List<SifterApi.Types.Project> Projs = S.Projects();
+
+            int n = 0;
+            string lowerProjs = "";
+            do
+            {
+                lowerProjs = Projs[n].Name.ToLowerInvariant();
+                n += 1;
+            }
+            while (!lowerProjs.Equals(Proj.ToLowerInvariant()) & n < Projs.Count);
+
+            if (!lowerProjs.Equals(Proj.ToLowerInvariant()))
+                return false;
+            
             return true;
         }
 
@@ -36,23 +60,43 @@ namespace ExampleCsPlugin
         public string GetCommitMessage2( IntPtr hParentWnd, string parameters, string commonURL, string commonRoot, string[] pathList,
                                string originalMessage, string bugID, out string bugIDOut, out string[] revPropNames, out string[] revPropValues )
         {
+            // sifterapi code
+            int first = parameters.IndexOf(",");
+            int last = parameters.LastIndexOf(",");
+            string Proj = parameters.Substring(0, first);                                // textBoxProj "<enter your api access key here>"
+            string ApiKey = parameters.Substring(first + 1, last - first - 1);           // textBoxApiKey "<enter your company name here>"
+            string Uri = parameters.Substring(last + 1, parameters.Length - last - 1);   // textBoxUri "<enter your project name here>"
+            
+            Sifter S = new Sifter(ApiKey, Uri);
+
+            List<SifterApi.Types.Project> Projs = S.Projects();
+
+            int n = 0;
+            string lowerProjs = "";
+            do
+            {
+                lowerProjs = Projs[n].Name.ToLowerInvariant();
+                n += 1;
+            }
+            while (!lowerProjs.Equals(Proj.ToLowerInvariant()) & n < Projs.Count);
+
+            List<SifterApi.Types.IssueListingEntry> ILEs = S.Issues(Projs[n-1]);
+            
             try
             {
                 List<TicketItem> tickets = new List<TicketItem>( );
-                tickets.Add( new TicketItem( 12, "Service doesn't start on Windows Vista" ) );
-                tickets.Add( new TicketItem( 19, "About box doesn't render correctly in large fonts mode" ) );
+                //tickets.Add(new TicketItem(12, "Service doesn't start on Windows Vista"));
+                //tickets.Add(new TicketItem(19, "About box doesn't render correctly in large fonts mode"));
+                
+                foreach (SifterApi.Types.IssueListingEntry ile in ILEs)
+                    tickets.Add(new TicketItem(ile.Number, ile.Subject));
 
-                /*
-                                tickets.Add(new TicketItem(88, commonRoot));
-                                foreach (string path in pathList)
-                                    tickets.Add(new TicketItem(99, path));
-                 */
-                revPropNames = new string[2];
-                revPropValues = new string[2];
-                revPropNames[0] = "bugtraq:issueIDs";
-                revPropNames[1] = "myownproperty";
-                revPropValues[0] = "13, 16, 17";
-                revPropValues[1] = "myownvalue";
+                revPropNames = new string[0];
+                revPropValues = new string[0];
+                //revPropNames[0] = "bugtraq:issueIDs";
+                //revPropNames[1] = "myownproperty";
+                //revPropValues[0] = "13, 16, 17";
+                //revPropValues[1] = "myownvalue";
 
                 bugIDOut = bugID + "added";
 
@@ -83,7 +127,8 @@ namespace ExampleCsPlugin
 
         public string CheckCommit( IntPtr hParentWnd, string parameters, string commonURL, string commonRoot, string[] pathList, string commitMessage )
         {
-            return "the commit log message is not correct.";
+            return "";
+            //return "the commit log message is not correct.";
         }
 
         public string OnCommitFinished( IntPtr hParentWnd, string commonRoot, string[] pathList, string logMessage, int revision )
@@ -108,9 +153,10 @@ namespace ExampleCsPlugin
             if ( form.ShowDialog( ) != DialogResult.OK )
                 return "";
 
-            string options = form.checkBox1.Checked ? "option1" : "";
-            options += form.checkBox2.Checked ? "option2" : "";
-            return options;
+            string newparameters = form.textBoxProj.Text;
+            newparameters += "," + form.textBoxApiKey.Text;
+            newparameters += "," + form.textBoxUri.Text;
+            return newparameters;
         }
 
     }
