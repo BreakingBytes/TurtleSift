@@ -99,27 +99,29 @@ namespace ExampleCsPlugin
                 //revPropValues[0] = "13, 16, 17";
                 //revPropValues[1] = "myownvalue";
 
-                StringBuilder result = new StringBuilder( originalMessage );
-                if ( originalMessage.Length != 0 && !originalMessage.EndsWith( "\n" ) )
-                    result.AppendLine( );
-
-                MyIssuesForm form = new MyIssuesForm(tickets);
-
                 string added = "";
-
-                foreach (TicketItem ticket in form.TicketsFixed)
+                for (n = 0; n < ILEs.Count; n++) 
                 {
-                    result.AppendFormat( "Fixed #{0}: {1}", ticket.Number, ticket.Summary );
-                    result.AppendLine( );
-                    selectedTickets.Add( ticket );
-
-                    added += "," + ticket.Number.ToString();
+                    added += "," + ILEs[n].Number.ToString();
                 }
 
                 bugIDOut = bugID + added;
 
-                if (form.ShowDialog() != DialogResult.OK)
+                MyIssuesForm form = new MyIssuesForm( tickets );
+                if ( form.ShowDialog( ) != DialogResult.OK )
                     return originalMessage;
+
+                StringBuilder result = new StringBuilder( originalMessage );
+                if ( originalMessage.Length != 0 && !originalMessage.EndsWith( "\n" ) )
+                    result.AppendLine( );
+
+                foreach ( TicketItem ticket in form.TicketsFixed )
+                {
+                    result.AppendFormat( "Fixed #{0}: {1}", ticket.Number, ticket.Summary );
+                    result.AppendLine( );
+                    selectedTickets.Add( ticket );
+                }
+
 
                 return result.ToString( );
             }

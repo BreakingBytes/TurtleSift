@@ -17,14 +17,13 @@ ECHO Back up registry.
 SET RGBKFILE=%DATE:~10,4%-%DATE:~4,2%-%DATE:~7,2%-regbkfile.reg  >> %LOGFILE% 2>&1
 REGEDIT /E %RGBKFILE% >> %LOGFILE% 2>&1
 
-DEL removeExampleCsPlugin.reg
 SETLOCAL ENABLEDELAYEDEXPANSION
 FOR /F "TOKENS=* DELIMS= " %%A in (ExampleCsPlugin.reg) do (
 SET /A N+=1
 SET L!N!=%%A
 )
 SETLOCAL DISABLEDELAYEDEXPANSION
-ECHO %L1% >> removeExampleCsPlugin.reg
+ECHO %L1% > removeExampleCsPlugin.reg
 SET L2=%L2:[=[-%
 ECHO %L2% >> removeExampleCsPlugin.reg
 ECHO %L3% >> removeExampleCsPlugin.reg
