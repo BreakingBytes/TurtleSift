@@ -8,8 +8,8 @@
     <ProjectGuid>{CFF6CAA1-27A0-46FF-89D6-AD70F3575685}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>TurtleSift</RootNamespace>
-    <AssemblyName>TurtleSift</AssemblyName>
+    <RootNamespace>ExampleCsPlugin</RootNamespace>
+    <AssemblyName>ExampleCsPlugin</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <FileUpgradeFlags>
@@ -91,9 +91,6 @@
     <EmbeddedResource Include="OptionsForm.resx">
       <DependentUpon>OptionsForm.cs</DependentUpon>
     </EmbeddedResource>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="TurtleSift.reg" />
   </ItemGroup>
   <ItemGroup>
     <WCFMetadata Include="Service References\" />

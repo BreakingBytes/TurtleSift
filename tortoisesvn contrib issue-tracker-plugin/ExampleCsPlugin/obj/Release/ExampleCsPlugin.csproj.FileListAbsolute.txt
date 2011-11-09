@@ -1,7 +1,5 @@
 C:\Documents and Settings\mmikofski\My Documents\Visual Studio 2010\Projects\tortoisesvn contrib issue-tracker-plugin\ExampleCsPlugin\bin\Release\ExampleCsPlugin.dll
 C:\Documents and Settings\mmikofski\My Documents\Visual Studio 2010\Projects\tortoisesvn contrib issue-tracker-plugin\ExampleCsPlugin\bin\Release\ExampleCsPlugin.pdb
-C:\Documents and Settings\mmikofski\My Documents\Visual Studio 2010\Projects\tortoisesvn contrib issue-tracker-plugin\ExampleCsPlugin\bin\Release\Interop.BugTraqProvider.dll
-C:\Documents and Settings\mmikofski\My Documents\Visual Studio 2010\Projects\tortoisesvn contrib issue-tracker-plugin\ExampleCsPlugin\bin\Release\SifterApi.dll
 C:\Documents and Settings\mmikofski\My Documents\Visual Studio 2010\Projects\tortoisesvn contrib issue-tracker-plugin\ExampleCsPlugin\bin\Release\SifterApi.pdb
 C:\Documents and Settings\mmikofski\My Documents\Visual Studio 2010\Projects\tortoisesvn contrib issue-tracker-plugin\ExampleCsPlugin\obj\Release\ResolveAssemblyReference.cache
 C:\Documents and Settings\mmikofski\My Documents\Visual Studio 2010\Projects\tortoisesvn contrib issue-tracker-plugin\ExampleCsPlugin\obj\Release\ExampleCsPlugin.CommitFinishedForm.resources
