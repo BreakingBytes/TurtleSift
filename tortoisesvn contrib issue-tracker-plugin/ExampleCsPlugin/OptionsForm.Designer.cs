@@ -83,7 +83,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(22, 54);
+            this.label1.Location = new System.Drawing.Point(22, 53);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(40, 13);
             this.label1.TabIndex = 6;
@@ -92,7 +92,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(22, 109);
+            this.label2.Location = new System.Drawing.Point(22, 108);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(63, 13);
             this.label2.TabIndex = 7;
@@ -101,7 +101,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(22, 164);
+            this.label3.Location = new System.Drawing.Point(22, 163);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(60, 13);
             this.label3.TabIndex = 8;
@@ -112,10 +112,10 @@
             this.linkLabel1.AutoSize = true;
             this.linkLabel1.Location = new System.Drawing.Point(22, 18);
             this.linkLabel1.Name = "linkLabel1";
-            this.linkLabel1.Size = new System.Drawing.Size(153, 13);
+            this.linkLabel1.Size = new System.Drawing.Size(158, 13);
             this.linkLabel1.TabIndex = 9;
             this.linkLabel1.TabStop = true;
-            this.linkLabel1.Text = "http://sifterapp.com/developer";
+            this.linkLabel1.Text = "https://sifterapp.com/developer";
             // 
             // OptionsForm
             // 

@@ -99,13 +99,7 @@ namespace ExampleCsPlugin
                 //revPropValues[0] = "13, 16, 17";
                 //revPropValues[1] = "myownvalue";
 
-                string added = "";
-                for (n = 0; n < ILEs.Count; n++) 
-                {
-                    added += "," + ILEs[n].Number.ToString();
-                }
-
-                bugIDOut = bugID + added;
+                bugIDOut = bugID;
 
                 MyIssuesForm form = new MyIssuesForm( tickets );
                 if ( form.ShowDialog( ) != DialogResult.OK )
@@ -122,6 +116,20 @@ namespace ExampleCsPlugin
                     selectedTickets.Add( ticket );
                 }
 
+                string added = selectedTickets[0].Number.ToString();
+                for (n = 1; n < selectedTickets.Count; n++)
+                {
+                    added += "," + selectedTickets[n].Number.ToString();
+                }
+
+                if (bugID.Length == 0)
+                {
+                    bugIDOut = added;
+                }
+                else
+                {
+                    bugIDOut = bugID + "," + added;
+                }
 
                 return result.ToString( );
             }

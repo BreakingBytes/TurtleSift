@@ -8,8 +8,8 @@
     <ProjectGuid>{CFF6CAA1-27A0-46FF-89D6-AD70F3575685}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>ExampleCsPlugin</RootNamespace>
-    <AssemblyName>ExampleCsPlugin</AssemblyName>
+    <RootNamespace>TurtleSift</RootNamespace>
+    <AssemblyName>TurtleSift</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <FileUpgradeFlags>
@@ -93,7 +93,7 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <None Include="ExampleCsPlugin.reg" />
+    <None Include="TurtleSift.reg" />
   </ItemGroup>
   <ItemGroup>
     <WCFMetadata Include="Service References\" />
