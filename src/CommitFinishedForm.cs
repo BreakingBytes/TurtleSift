@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 
-namespace ExampleCsPlugin
+namespace TurtleSift
 {
     public partial class CommitFinishedForm : Form
     {

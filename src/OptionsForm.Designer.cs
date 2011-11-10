@@ -1,4 +1,4 @@
-﻿namespace ExampleCsPlugin
+﻿namespace TurtleSift
 {
     partial class OptionsForm
     {

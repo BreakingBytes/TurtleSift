@@ -8,7 +8,7 @@ using System.Text;
 using System.Windows.Forms;
 using System.Diagnostics;
 
-namespace ExampleCsPlugin
+namespace TurtleSift
 {
     public partial class OptionsForm : Form
     {

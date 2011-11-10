@@ -9,7 +9,7 @@ using System.Text;
 using System.Windows.Forms;
 using System.Xml;
 
-namespace ExampleCsPlugin
+namespace TurtleSift
 {
     partial class MyIssuesForm : Form
     {

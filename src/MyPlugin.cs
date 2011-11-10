@@ -6,7 +6,7 @@ using System.Runtime.InteropServices;
 using Microsoft.Win32;
 using SifterApi; // SifterApi dll
 
-namespace ExampleCsPlugin
+namespace TurtleSift
 {
     [ComVisible(true),
         Guid("5870B3F1-8393-4c83-ACED-1D5E803A4F2B"),
