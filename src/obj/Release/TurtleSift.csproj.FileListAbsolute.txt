@@ -9,3 +9,14 @@ C:\Documents and Settings\mmikofski\My Documents\Visual Studio 2010\Projects\Tur
 C:\Documents and Settings\mmikofski\My Documents\Visual Studio 2010\Projects\TurtleSift\src\obj\Release\GenerateResource.write.1.tlog
 C:\Documents and Settings\mmikofski\My Documents\Visual Studio 2010\Projects\TurtleSift\src\obj\Release\TurtleSift.dll
 C:\Documents and Settings\mmikofski\My Documents\Visual Studio 2010\Projects\TurtleSift\src\obj\Release\TurtleSift.pdb
+C:\Users\mmikofski\Documents\Visual Studio 2010\Projects\TurtleSift\src\bin\Release\TurtleSift.dll
+C:\Users\mmikofski\Documents\Visual Studio 2010\Projects\TurtleSift\src\bin\Release\TurtleSift.pdb
+C:\Users\mmikofski\Documents\Visual Studio 2010\Projects\TurtleSift\src\bin\Release\SifterApi.pdb
+C:\Users\mmikofski\Documents\Visual Studio 2010\Projects\TurtleSift\src\obj\Release\ResolveAssemblyReference.cache
+C:\Users\mmikofski\Documents\Visual Studio 2010\Projects\TurtleSift\src\obj\Release\TurtleSift.CommitFinishedForm.resources
+C:\Users\mmikofski\Documents\Visual Studio 2010\Projects\TurtleSift\src\obj\Release\TurtleSift.MyIssuesForm.resources
+C:\Users\mmikofski\Documents\Visual Studio 2010\Projects\TurtleSift\src\obj\Release\TurtleSift.OptionsForm.resources
+C:\Users\mmikofski\Documents\Visual Studio 2010\Projects\TurtleSift\src\obj\Release\GenerateResource.read.1.tlog
+C:\Users\mmikofski\Documents\Visual Studio 2010\Projects\TurtleSift\src\obj\Release\GenerateResource.write.1.tlog
+C:\Users\mmikofski\Documents\Visual Studio 2010\Projects\TurtleSift\src\obj\Release\TurtleSift.dll
+C:\Users\mmikofski\Documents\Visual Studio 2010\Projects\TurtleSift\src\obj\Release\TurtleSift.pdb
