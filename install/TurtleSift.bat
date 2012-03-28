@@ -18,7 +18,7 @@ CD "%ROOTDIR%\SRC\BIN\RELEASE" >> %LOGFILE% 2>&1
 
 ECHO Register COM interface for plugin. >> %LOGFILE% 2>&1
 ECHO Register COM interface for plugin.
-C:\WINDOWS\Microsoft.NET\Framework\v4.0.30319\RegAsm TurtleSift.dll /codebase /regfile:TurtleSift.reg >> %LOGFILE% 2>&1
+C:\WINDOWS\Microsoft.NET\Framework64\v4.0.30319\RegAsm TurtleSift.dll /codebase /regfile:TurtleSift.reg >> %LOGFILE% 2>&1
 
 ECHO Add Implemented Categories key. >> %LOGFILE% 2>&1
 ECHO Add Implemented Categories key.

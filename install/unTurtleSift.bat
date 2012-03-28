@@ -36,7 +36,7 @@ REGEDIT /S removeTurtleSift.reg >> %LOGFILE% 2>&1
 
 ECHO Unregister COM interface for plugin. >> %LOGFILE% 2>&1
 ECHO Unregister COM interface for plugin.
-C:\WINDOWS\Microsoft.NET\Framework\v4.0.30319\RegAsm TurtleSift.dll /unregister >> %LOGFILE% 2>&1
+C:\WINDOWS\Microsoft.NET\Framework64\v4.0.30319\RegAsm TurtleSift.dll /unregister >> %LOGFILE% 2>&1
 
 ECHO Uninstallation complete. >> %LOGFILE% 2>&1
 PAUSE
