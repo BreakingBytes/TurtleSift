@@ -12,6 +12,7 @@ ECHO Installation of TurtleSift issue tracker plugin for TortoiseSVN.
 ECHO Change to src\bin\Release directory. >> %LOGFILE% 2>&1
 ECHO Change to src\bin\Release directory.
 SET ROOTDIR=%CD%
+REM remove "install" or "INSTALL" from %ROOTDIR%
 SET ROOTDIR=%ROOTDIR:\install=%
 SET ROOTDIR=%ROOTDIR:\INSTALL=%
 CD "%ROOTDIR%\SRC\BIN\RELEASE" >> %LOGFILE% 2>&1
@@ -28,11 +29,11 @@ ECHO %NEWKEY% >> TurtleSift.reg
 ECHO Back up registry. >> %LOGFILE% 2>&1
 ECHO Back up registry.
 SET RGBKFILE=%DATE:~10,4%-%DATE:~4,2%-%DATE:~7,2%-regbkfile.reg  >> %LOGFILE% 2>&1
-REGEDIT /E %RGBKFILE% >> %LOGFILE% 2>&1
+REGEDIT /E "%ROOTDIR%\SRC\BIN\RELEASE\%RGBKFILE%" >> %LOGFILE% 2>&1
 
 ECHO Merge registry keys. >> %LOGFILE% 2>&1
 ECHO Merge registry keys.
-REGEDIT /S TurtleSift.reg >> %LOGFILE% 2>&1
+REGEDIT /S "%ROOTDIR%\SRC\BIN\RELEASE\TurtleSift.reg" >> %LOGFILE% 2>&1
 
 ECHO Installation complete: %DATE%. >> %LOGFILE% 2>&1
 PAUSE
